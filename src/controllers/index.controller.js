@@ -4,8 +4,10 @@ indexController.renderIndex = (req, res) => {
     res.render('index')
 }
 
-indexController.rendertest = (req, res) => {
-    res.render('testing')
+indexController.renderNew = (req, res) => {
+    res.render('new')
 }
+
+
 
 export default indexController;

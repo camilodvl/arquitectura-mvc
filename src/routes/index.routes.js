@@ -4,6 +4,6 @@ import indexController from '../controllers/index.controller.js'
 const router = Router();
 
 router.get('/', indexController.renderIndex)
-router.get('/testing', indexController.rendertest)
+router.get('/new', indexController.renderNew)
 
 export default router
