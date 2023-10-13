@@ -1,6 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="/paciente/new" class="btn btn-primary">Crear paciente</a>
+    </div>
+    <div class="col">
+      <a href="/doctor/new" class="btn btn-primary">Crear doctor</a>
+    </div>
+    <div class="col">
+      <a href="/new" class="btn btn-primary">Registrar Cita</a>
+    </div>
+  </div>
 
-<div class="container p-5">
+  <h1>Lista de citas</h1>
 
-<h1>Hola mundo desde layouts</h1>
+  <table class="table">
+    <tr>
+      <th>Fecha</th>
+      <th>Paciente</th>
+      <th>Doctor</th>
+      <th> Observaciones</th>
+      <th> Medicamentos</th>
+    </tr>
+ <tbody>
+    {{#each citas}}  
+      <tr>
+        <td>{{fecha}}</td>
+        <td>{{paciente.nombre}}</td>
+        <td>{{doctor.nombre}}</td>
+        <td>{{observaciones}}</td>
+        <td>{{medicamentos}}</td>
+      </tr>
+
+    {{/each}}
+</tbody>
+  </table>
 
 </div>

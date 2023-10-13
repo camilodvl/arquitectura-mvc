@@ -3,7 +3,9 @@ import {dirname} from 'path';
 import path from "path";
 import { fileURLToPath } from 'url';
 import {engine} from 'express-handlebars'
-import router from "./routes/index.routes.js";
+import routerIndex from "./routes/index.routes.js";
+import routerPaciente from "./routes/paciente.routes.js"
+import routerDoctor from "./routes/doctor.routes.js";
 
 
 const _dirname = dirname(fileURLToPath(import.meta.url));//ruta del proyecto
@@ -25,7 +27,9 @@ app.use(express.urlencoded({extended: false})); //conofiguracion para los datos 
 
 //rutas
 
-app.use(router)
+app.use(routerIndex)
+app.use(routerPaciente)
+app.use(routerDoctor)
 
 
 //archivos estaticos

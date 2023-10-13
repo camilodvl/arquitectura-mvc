@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
 const citaSchema = mongoose.Schema({
   fecha: { type: String },
@@ -19,6 +20,6 @@ const citaSchema = mongoose.Schema({
     type: String },
 });
 
-const Doctor = mongoose.model("Doctor", doctorSchema);
+const Doctor = mongoose.model("Cita", citaSchema);
 
 export default Doctor;
